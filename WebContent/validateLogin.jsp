@@ -43,6 +43,9 @@
 			rs.next();
 			if(rs.getString(1).equals(username) && rs.getString(2).equals(password)){
 			retStr = "success";		
+			if(password.length() < 8){
+				retStr = "successbut";
+			}
 			if(username.equals("arnold")){
 				retStr = "ADMIN";
 			}
@@ -61,6 +64,9 @@
 		{	
 			if(retStr.equals("ADMIN")){
 				session.setAttribute("thisisAdmin",username);
+			}
+			if(retStr.equals("successbut")){
+				session.setAttribute("passwordsucks",username);
 			}
 			
 			session.removeAttribute("loginMessage");

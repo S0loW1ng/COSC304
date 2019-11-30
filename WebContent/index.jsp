@@ -4,6 +4,23 @@
         <title>Ray's Grocery Main Page</title>
 </head>
 <body>
+
+
+<%@ include file="auth.jsp"%>
+<%@ page import="java.text.NumberFormat" %>
+<%@ include file="jdbc.jsp" %>
+
+<%@ page language="java" import="java.io.*,java.sql.*"%>
+<%
+String sucks = (String) session.getAttribute("passwordsucks");
+boolean flag = false;
+
+if(!(sucks == null)){
+	out.print("<script>");
+	out.print("  alert(\"Your password sucks. My sister that is in arts can hack you!\");");
+	out.print("</script>");
+}
+%>
 <h1 align="center">Welcome to Ray's Grocery</h1>
 
 <h2 align="center"><a href="login.jsp">Login</a></h2>
@@ -20,6 +37,10 @@
 
 <%
 // TODO: Display user name that is logged in (or nothing if not logged in)	
+String usename = (String) session.getAttribute("authenticatedUser");
+if(!(usename == null)){
+out.println("<h1> Welcome " + usename + "</h1>");
+}
 %>
 </body>
 </head>
