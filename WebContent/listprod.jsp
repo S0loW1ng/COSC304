@@ -50,8 +50,8 @@ String reqname = request.getParameter("productName");
 			out.println("<table border=\"1\"><tr><th>Add To Cart</th><th>ProductName</th><th>Price</th><th></th><th> Description</th></tr>");
 			while(rs.next()){
 				if(rs.getString(1).equals("1")){
-				out.println("<tr><th><a href=\"addcart.jsp?id="+ rs.getString(1) + "&name="+ rs.getString(2)+ "&price=" +rs.getString(3) +"\">Add to Cart</a></th><th>"+ rs.getString(2) +"</th><th>"+"$" +rs.getString(3) +"</th><th><img src = \"displayImage.jsp?id="+ rs.getString(1)+"\"/><th>"+rs.getString(5)+"</th></tr>");
-				}else out.println("<tr><th><a href=\"addcart.jsp?id="+ rs.getString(1) + "&name="+ rs.getString(2)+ "&price=" +rs.getString(3) +"\">Add to Cart</a></th><th>"+ rs.getString(2) +"</th><th>"+"$" +rs.getString(3) +"</th><th><img src =\""+ rs.getString(4)+"\"/></th><th>"+rs.getString(5)+"</th></tr>");
+				out.println("<tr><th><a href=\"addcart.jsp?id="+ rs.getString(1) + "&name="+ rs.getString(2)+ "&price=" +rs.getString(3) +"\">Add to Cart</a></th><th>"+ rs.getString(2) +"</th><th>"+"$" +rs.getString(3) +"</th><th><img src = \"displayImage.jsp?id="+ rs.getString(1)+"\"  width=\"128\" height=\"128\" /><th>"+rs.getString(5)+"</th></tr>");
+				}else out.println("<tr><th><a href=\"addcart.jsp?id="+ rs.getString(1) + "&name="+ rs.getString(2)+ "&price=" +rs.getString(3) +"\">Add to Cart</a></th><th>"+ rs.getString(2) +"</th><th>"+"$" +rs.getString(3) +"</th><th><img src =\""+ rs.getString(4)+"\" width=\"128\" height=\"128\"/></th><th>"+rs.getString(5)+"</th></tr>");
 				
 			}
 			out.println("</table>");
