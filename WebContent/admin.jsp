@@ -49,10 +49,13 @@ if(userName.equals("arnold") && thisisAdmin.equals("arnold") && flag == true){
 	out.println("<table border=\"1\">");
 	out.println("<tr><th><a href=\"NewProduct.jsp\"> Add new product</a></th>");
 	out.println("<th><a href=\"deleteProduct.jsp\"> Product Delete</a></th>");
-	out.println("<th><a href=\"updateProduct.jsp\"> Product Update</a></th>");
-	out.println("<th><a href=\"changeStatus.jsp\">Order Status</a></th>");
+	out.println("<th><a href=\"UpdateProduct.jsp\"> Product Update</a></th>");
 	out.println("<th><a href=\"photoUI.jsp\"> Add product pictues</a></th>");
 	out.println("<th><a href=\"listCustomers.jsp\">Customer Lists</a></th>");
+	out.println("<th><a href=\"warehouseUpdate.jsp\">Warehouse Update</a></th>");
+	out.println("<th><a href=\"warehouse.jsp\">Warehouse Add</a></th>");
+	out.println("<th><a href=\"custUpdate.jsp\">Customer Update</a></th>");
+	out.println("<th><a href=\"custAdd.jsp\">Customer Addition</a></th>");
 	
 	out.println("</tr></table>");
 	
